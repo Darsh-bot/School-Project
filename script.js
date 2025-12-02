@@ -17,10 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   ---------------------------- */
   var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
-  navAnchors.forEach(function (anchor) {
-    anchor.addEventListener("click", function (event) {
+  // ❗ Bug introduced here
+  navAnchors.forEach(function (link) {
+    link.addEventListener("click", function (event) {
       event.preventDefault(); // stop default jump
 
+      // BUG: using 'anchor' instead of 'link'
       var targetId = anchor.getAttribute("href").substring(1);
       var targetSection = document.getElementById(targetId);
 
