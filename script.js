@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // stop default jump
 
-      // BUG: using 'anchor' instead of 'link'
       var targetId = anchor.getAttribute("href").substring(1);
       var targetSection = document.getElementById(targetId);
 
