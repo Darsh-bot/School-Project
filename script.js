@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ---------------------------- */
   var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
-  // ❗ Bug introduced here
+  
   navAnchors.forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // stop default jump
