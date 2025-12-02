@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   navAnchors.forEach(function (link) {
-    link.addEventListener("click", function (event) {
+    anchor.addEventListener("click", function (event) {
       event.preventDefault(); // stop default jump
 
       var targetId = anchor.getAttribute("href").substring(1);
