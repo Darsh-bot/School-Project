@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ---------------------------- */
   var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
-  
-  navAnchors.forEach(function (link) {
+  navAnchors.forEach(function (anchor) {        // ✅ use "anchor" here
     anchor.addEventListener("click", function (event) {
       event.preventDefault(); // stop default jump
 
@@ -76,10 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
         span.textContent = "";
       });
 
-      // Get input fields
-      var nameInput = document.querySelector("#name");
-      var emailInput = document.querySelector("#email");
-      var messageInput = document.querySelector("#message");
+      // Get input fields (scoped to the form is a bit safer)
+      var nameInput = contactForm.querySelector("#name");
+      var emailInput = contactForm.querySelector("#email");
+      var messageInput = contactForm.querySelector("#message");
 
       var hasError = false;
 
